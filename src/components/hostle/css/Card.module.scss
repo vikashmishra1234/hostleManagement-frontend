@@ -1,0 +1,31 @@
+.card{
+    width: 23vw;
+    background-color: black; 
+    div:hover{
+  background-color: aqua;
+  transition: ease-in .3s;
+        color: rgb(37, 36, 36);
+        transition: all 1.3 linear;
+
+    }
+ 
+
+ 
+  div{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h3{
+        font-size: 24px;
+        border-bottom: 1px solid rgb(141, 136, 136);
+        width: 100%;
+    }
+    img{
+        
+        width: 80%;
+        border-radius: 10px;
+    }
+  }
+}

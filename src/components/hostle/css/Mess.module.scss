@@ -1,0 +1,63 @@
+.block {
+  background-color: rgb(88, 81, 81);
+
+  h1 {
+    color: #ffffff84;
+    font-size: 45px;
+
+    margin-left: 20px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 140vh;
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      .block1 {
+        .card {
+          width: 23vw;
+          background-color: black;
+          div:hover {
+            background-color: aqua;
+            transition: ease-in 0.3s;
+            color: rgb(37, 36, 36);
+            transition: all 1.3 linear;
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            h3 {
+              font-size: 24px;
+              border-bottom: 1px solid rgb(141, 136, 136);
+              width: 100%;
+            }
+            img {
+              width: 80%;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes animate {
+  0% {
+    background-color: aqua;
+  }
+  30% {
+    background-color: aqua;
+  }
+  60% {
+    background-color: aqua;
+  }
+  100% {
+    background-color: aqua;
+  }
+}

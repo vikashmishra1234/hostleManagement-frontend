@@ -1,0 +1,56 @@
+.top{
+    color: rgb(157, 152, 152);
+    font-size: 25px;
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+   
+
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    font-size: 30px;
+
+}
+.upper{
+
+    display: flex;
+justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(157, 152, 152);
+    margin: 0px 20px 0px 20px;
+    
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+.colrev{
+    display: flex;
+    flex-direction: row-reverse;
+}
+a{
+    text-decoration: none;
+    color: rgb(113, 110, 110);
+}
+.footer{
+    width: 100%;
+    margin: auto;
+    font-size: 21px;
+    text-align: center;
+    background-color: rgb(37, 35, 35);
+    color: rgb(129, 127, 127);
+    padding: 10px 0px 10px 0px;
+}
+.span{
+    margin: 0px 0px 10px 0px;
+    color: rgb(113, 110, 110);
+  
+}
