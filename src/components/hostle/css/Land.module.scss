@@ -1,0 +1,52 @@
+.container{
+ 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+ height: 92vh;
+   background-color: rgb(238, 172, 85);
+   
+   .row1{
+    display: flex;
+    justify-content: space-around;
+    .box{
+        color: rgb(73, 71, 71);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 3px 1px tan;
+        background-color: rgb(40, 201, 201);
+       
+        width: 20vw;
+        text-align: center;
+        cursor: pointer;
+       
+
+    }
+    .box:hover{
+        background-image: linear-gradient(160deg,#2d9bdb 0%,#28cbb8 100%);
+        
+    }
+  
+   }
+   
+}
+
+
+@media only screen and (max-width: 600px) {
+   .container{
+    height: fit-content;
+    align-items: center;
+ 
+    .row1{
+        flex-direction: column;
+        margin-bottom: 30px;
+        .box{
+            margin-top: 30px;
+            width: 60vw;
+            height: fit-content;
+            padding: 20px;
+        }
+    }
+   }
+  }

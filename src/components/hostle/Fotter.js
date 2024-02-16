@@ -25,10 +25,16 @@ const Fotter = () => {
         <div className='icon'><Link to=""><IoLogoWhatsapp/></Link> <Link to=""><FaInstagram/></Link> <Link to=""><FaFacebook/></Link></div>
         </div>
      <hr color='gray' />
+     <div  id='add'>
+            <h4>Reach Us</h4>
+          <span className='span'><IoMdHome/> Mathura</span>
+          <span className='span'><MdEmail/> vikash12@gmail.com</span>
+          <span className='span'><FaPhoneAlt/> +91 8979481819</span>
+          </div>
 
         <div className='upper colrev'>
 
-          <div className='flexCol'>
+          <div className='flexCol' id='add'>
             <h4>Reach Us</h4>
           <span className='span'><IoMdHome/> Mathura</span>
           <span className='span'><MdEmail/> vikash12@gmail.com</span>

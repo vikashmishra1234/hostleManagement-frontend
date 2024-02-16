@@ -54,3 +54,38 @@ a{
     color: rgb(113, 110, 110);
   
 }
+#add{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .top p{
+        display: none;
+    }
+    .top .icon{
+       
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin-top: 10px;
+    }
+    .upper{
+        display: none;
+    }
+    #add{
+        display: flex;
+        font-size: 25px;
+        color: rgb(157, 152, 152);
+       flex-direction: column;  
+       margin-left: 20px; 
+       font-size: 19px;
+           
+    }
+    #add h4{
+        margin:10px 0px 5px 0px;
+    }
+    .footer{
+        font-size: 4vw;
+    }
+
+}

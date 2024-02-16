@@ -1,9 +1,12 @@
-import React from 'react'
-import {AppBar,Toolbar,Button,Typography, Box} from '@mui/material'
+import React, { useContext } from 'react'
+import {AppBar,Toolbar,Button,Typography,Tab, Box, Drawer} from '@mui/material'
 import styled from '@emotion/styled'
 import { FaUniversity } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
+import {Menu,MenuItem} from '@mui/material';
 import './hostle/css/style.css'
+import AdminContext from './context/AdminContext';
+import Drawerr from './Drawer';
 
 // import StorefrontIcon from '@mui/icons-material/Storefront';
 
@@ -16,7 +19,7 @@ color:#fff;
 const Links = styled(Box)`
   display:flex;
   justify-content:space-around;
-  width:15vw;
+  width:30%;
 
  
 `
@@ -24,25 +27,72 @@ const Links = styled(Box)`
 
 const Navbar = () => {
   const Navigate = useNavigate()
-  return (
-      <Box sx={{height:'10vh'}}>
+  const a = useContext(AdminContext)
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-        <AppBar sx={{bgcolor:'#077707',height:'10vh'}} component={'nav'}>
-          <Toolbar>
+ 
+  return (
+      <Box sx={{height:'7.55vh'}}>
+
+        <AppBar position='fixed' sx={{bgcolor:'#077707'}} component={'nav'}>
+          <Toolbar sx={{display:{xs:'flex'},justifyContent:{xs:'space-between'}}}>
+            <Drawerr/>
             <Typography
               color={"goldenrod"}
               variant='h6'
+              flex={1}
               component={"div"}
-              sx={{flexGrow:1,fontSize:'24px',display:'flex',
-              fontSize:'28px',alignItems:'center', fontWeight:'600'}}
-            ><FaUniversity  size={35} /> <span style={{marginLeft:'10px'}}>Bsa Hostle</span> </Typography>
-        
-            <Links id='link' >
+              sx={{fontSize:'24px',display:{xs:'none',sm:'flex'},
+             fontWeight:'600'}}
+            ><FaUniversity  size={35}  /> <span style={{marginLeft:'10px'}}>Bsa Hostle</span> </Typography>
+  
+            <Links id='link' sx={{display:{xs:'none',sm:'flex'}}} >
               <Link to='/mess'>Mess</Link>
               <Link to='/about'>About</Link>
+              <Link to='/admin'>Admin</Link>
+   
+
+                
             </Links>
          
-
+            <Box >
+      <Button
+     
+      
+        // sx={{display:`${a.Logined?'block':'none'}`}}
+        variant='contained'
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Branch
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        onClick={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem ><Link to='/admin/login/land/firstyear'>1st Year</Link></MenuItem>
+        <MenuItem ><Link to='/admin/login/land/secondyear'>2st Year</Link></MenuItem>
+        <MenuItem ><Link to='/admin/login/land/thirdyear'>3st Year</Link></MenuItem>
+        <MenuItem ><Link to='/admin/login/land/fourthyear'>4st Year</Link></MenuItem>
+       
+      </Menu>
+    </Box>
         
             
           </Toolbar>

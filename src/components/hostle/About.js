@@ -11,30 +11,30 @@ const Aboutt = () => {
         <div className={css.block1}>
           <img src={Img1} />
           <p className={`${css.about}`}>
-            At Bsa, we're more than   just a place to  <br /> stay – we're a
-            vibrant community, a hub for  <br /> students from 
-           all corners of the globe.  <br /> Nestled in   the heart of Mathura,  <br />
+            At Bsa, we're more than   just a place to   stay – we're a
+            vibrant community, a hub for   students from 
+           all corners of the globe.   Nestled in   the heart of Mathura,  
             our hostel
-           offers an authentic and unforgettable <br /> experience for
-            students seeking comfort,  <br />   connection,  and a home
+           offers an authentic and unforgettable  experience for
+            students seeking comfort,     connection,  and a home
             away from home.
           </p>
         </div>
 
 
-        <div style={{display:'flex',flexDirection:'row-reverse'}} className={css.block1}>
+        <div className={css.block1}>
           <img src={Img2} />
           <p className={`${css.about}`}>
-          Founded in 1997, our journey began with <br /> a simple idea: to
-          create a haven for <br /> wanderers, where cultures converge,
-          friendships <br />  flourish,
+          Founded in 1997, our journey began with  a simple idea: to
+          create a haven for  wanderers, where cultures converge,
+          friendships   flourish,
          and memories are made. Over the years,
-          <br /> we've welcomed countless guests, each adding a<br /> unique
+           we've welcomed countless guests, each adding a unique
           chapter to our story. From backpackers to
-          <br />
-          solo explorers, families, and groups <br /> of friends, everyone finds
+          
+          solo explorers, families, and groups  of friends, everyone finds
           a place
-          <br /> in our eclectic and inclusive environment.
+           in our eclectic and inclusive environment.
         </p>
         </div>
       </div>

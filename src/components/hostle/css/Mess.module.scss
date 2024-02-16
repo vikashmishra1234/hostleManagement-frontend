@@ -47,17 +47,39 @@
     }
   }
 }
-@keyframes animate {
-  0% {
-    background-color: aqua;
-  }
-  30% {
-    background-color: aqua;
-  }
-  60% {
-    background-color: aqua;
-  }
-  100% {
-    background-color: aqua;
+
+@media only screen and (max-width: 600px) {
+  .block {
+    height: fit-content;
+    h1 {
+      font-size: 9vw;
+ 
+    }
+    .wrapper {
+      height: fit-content;
+      .container {
+        flex-direction: column;
+        align-items: center;
+        .block1 {
+          .card {
+            width: 85vw;
+            margin-bottom: 30px;
+            div {
+              background-image: linear-gradient(#2193b0, #6dd5ed);
+              h3 {
+                width: 100%;
+                font-size: 7vw;
+               
+                border-bottom: 1px solid rgb(34, 33, 33);
+              }
+             p{
+              background-color: #6dd5ed;
+              width: 100%;
+             }
+            }
+          }
+        }
+      }
+    }
   }
 }

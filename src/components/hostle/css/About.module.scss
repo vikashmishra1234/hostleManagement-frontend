@@ -14,6 +14,31 @@
         }
         p{
             font-size: 27px;
+            border-color: aqua;
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Container{
+        height: fit-content;
+        h1{
+            font-size: 34px;
+        }
+        .block1{
+            flex-direction: column;
+            align-items: center;
+            font-size: 6vw;
+            img{
+              width: 90%;
+            }
+            p{
+                width: 90%;
+                font-size: 22px;
+               
+              
+            }
         }
     }
 }

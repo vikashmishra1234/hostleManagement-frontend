@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <div className={css.container}>
         <h1>Register Now</h1>
-        <Paper sx={{width:'45vw'}} elevation={8}>
       <div className={css.form}>
+        <Paper variant="outlined" elevation={8}>
 
         <form action="">
         <TextField label="Name" required variant="outlined" />
@@ -16,8 +16,8 @@ const Contact = () => {
         <TextField label="year of studying" required variant="outlined" />
         <Button variant="contained" type="submit">Register</Button>
         </form>
-      </div>
         </Paper>
+      </div>
     </div>
   );
 };

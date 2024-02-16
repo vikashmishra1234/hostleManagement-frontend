@@ -71,3 +71,26 @@
         background-image: url('./utils/1.jpg');
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .wrapper{
+        .container{
+            .block1{
+                    width: 100%;
+                    font-size: 7vw;
+                    height: 6vh;
+            }
+            .block2{
+                .info{
+                    font-size: 6vw;
+                    height: 50vh;
+                    margin: auto;
+                }
+                flex-direction: column;
+                .contact{
+                    display: none;
+                }
+            }
+        }
+    }
+}
