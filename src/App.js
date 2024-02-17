@@ -18,6 +18,8 @@ import Thirdyear from './components/hostler/Thirdyear';
 import Fourthyear from './components/hostler/Fourthyear';
 import AdminState from './components/context/AdminState';
 import  Drawer  from './components/Drawer';
+import Contact from './components/hostle/Contact';
+import Fotter from './components/hostle/Fotter';
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
           <Route exact path='/' element ={<Components/>}></Route>
           <Route exact path='/mess' element={<Mess/>}/>
           <Route exact path='/about' element={<About/>}/>
+          <Route exact path='/contact' element={<Contact/>}/>
           <Route exact path='/admin' element={<Login/>}/>
           <Route exact path='/admin/login/land' element={<Land/>}/>
           <Route exact path='/admin/login/land/firstyear' element={<Firstyear/>}/>
@@ -38,7 +41,9 @@ function App() {
           <Route exact path='/admin/login/land/thirdyear' element={<Thirdyear/>}/>
           <Route exact path='/admin/login/land/fourthyear' element={<Fourthyear/>}/>
         </Routes>
+        <Fotter/>
       </Router>
+
   </AdminState>
     </>
    

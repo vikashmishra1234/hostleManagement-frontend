@@ -14,7 +14,7 @@ const Components = () => {
        <About/>
        <Mess/>
        <Contact/>
-       <Fotter/>
+      
       
     </Box>
   )

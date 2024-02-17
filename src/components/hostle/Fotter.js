@@ -3,12 +3,12 @@ import { Paper } from '@mui/material'
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
-import { IoMdHome } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import './css/Footer.css'
 import { FaPhoneAlt } from "react-icons/fa";
 import{ Link }from 'react-router-dom'
 import { RiFolderUnknowLine } from "react-icons/ri";
+import { IoMdHome } from "react-icons/io";
 import { MdPermContactCalendar } from "react-icons/md";
 import {Divider }from '@mui/material';
 
@@ -34,7 +34,7 @@ const Fotter = () => {
 
         <div className='upper colrev'>
 
-          <div className='flexCol' id='add'>
+          <div className='flexCol ' >
             <h4>Reach Us</h4>
           <span className='span'><IoMdHome/> Mathura</span>
           <span className='span'><MdEmail/> vikash12@gmail.com</span>
@@ -51,9 +51,9 @@ const Fotter = () => {
           <div className='flexCol'>
             <h4>Also Visit</h4>
             <span className='span'>
-            <IoMdHome/> <Link to= ''>Home</Link></span>
-            <span className='span'> <RiFolderUnknowLine/> <Link to= ''>About</Link></span>
-            <span className='span'> <MdPermContactCalendar/> <Link to= ''>Contact</Link></span>
+            <IoMdHome/> <Link to= '/'>Home</Link></span>
+            <span className='span'> <RiFolderUnknowLine/> <Link to= '/about'>About</Link></span>
+            <span className='span'> <MdPermContactCalendar/> <Link to= '/contact'>Contact</Link></span>
           </div>
         </div>
      

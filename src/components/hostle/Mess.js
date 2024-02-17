@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 const Mess = () => {
   return (
     <div className={`${css.block}`}>
-      <h1>What we feed?</h1>
+      
 
       <div className={`${css.wrapper}`}>
         <div className={`${css.container}`}>
@@ -17,7 +17,7 @@ const Mess = () => {
             <div className={`${css.card}`}>
               <Paper elevation={10}>
                 <div>
-                  <h3>Shahi Paneer</h3>
+                  <h3>Kadi  (Mon)</h3>
 
                   <img src={Rajma} />
                   <p>
@@ -35,7 +35,7 @@ const Mess = () => {
             <div className={`${css.card}`}>
               <Paper elevation={10}>
                 <div>
-                  <h3>Rajma</h3>
+                  <h3>Rajma Chawal (Tue)</h3>
                   <img src={Rajma} />
                   <p>
                     Flavorful red kidney in tomato
@@ -52,7 +52,7 @@ const Mess = () => {
             <div className={`${css.card}`}>
               <Paper elevation={10}>
                 <div>
-                  <h3>Rajma Chawal</h3>
+                <h3>Rajma Chawal (Tue)</h3>
                   <img src={Rajma} />
                   <p>
                     Flavorful red kidney in tomato <br />
@@ -71,7 +71,7 @@ const Mess = () => {
             <div className={`${css.card}`}>
               <Paper elevation={10}>
                 <div>
-                  <h3>Shahi Paneer</h3>
+                <h3>Rajma Chawal (Tue)</h3>
 
                   <img src={Rajma} />
                   <p>
@@ -89,7 +89,7 @@ const Mess = () => {
             <div className={`${css.card}`}>
               <Paper elevation={10}>
                 <div>
-                  <h3>Rajma</h3>
+                <h3>Rajma Chawal (Tue)</h3>
                   <img src={Rajma} />
                   <p>
                     Flavorful red kidney in tomato
@@ -106,7 +106,7 @@ const Mess = () => {
             <div className={`${css.card}`}>
               <Paper elevation={10}>
                 <div>
-                  <h3>Rajma Chawal</h3>
+                <h3>Rajma Chawal (Tue)</h3>
                   <img src={Rajma} />
                   <p>
                     Flavorful red kidney in tomato <br />

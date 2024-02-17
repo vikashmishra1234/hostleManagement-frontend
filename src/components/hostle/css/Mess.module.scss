@@ -1,21 +1,17 @@
 .block {
-  background-color: rgb(88, 81, 81);
-
-  h1 {
-    color: #ffffff84;
-    font-size: 45px;
-
-    margin-left: 20px;
-  }
+  height: fit-content;
+  
+  background-image: linear-gradient(#0F2027,#2C5364);
+ 
   .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 140vh;
+      
 
     .container {
       display: flex;
       justify-content: space-around;
+     margin:15px 0px 15px 0px;
       .block1 {
         .card {
           width: 23vw;
@@ -28,6 +24,8 @@
           }
 
           div {
+            background-image: linear-gradient(#57faf5,#48c2ef);
+
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -64,11 +62,12 @@
           .card {
             width: 85vw;
             margin-bottom: 30px;
+           
             div {
               background-image: linear-gradient(#2193b0, #6dd5ed);
               h3 {
                 width: 100%;
-                font-size: 7vw;
+                font-size: 6.5vw;
                
                 border-bottom: 1px solid rgb(34, 33, 33);
               }

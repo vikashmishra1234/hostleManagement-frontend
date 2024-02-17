@@ -26,7 +26,7 @@ const Land = () => {
 
 
 
-
+//Find Student or Check Presence of Student
   const handleFinde = async(event)=>{
     event.preventDefault()
     handleClose()
@@ -34,7 +34,7 @@ const Land = () => {
     const formJson = Object.fromEntries(formData.entries());
     console.log("this is attendence foem",formJson);
     try {
-      let response = await axios.post('https://attendencebackend-23tk.onrender.com/api/checkattendence',formJson,headers);
+      let response = await axios.post('http://localhost:5000/api/checkattendence',formJson,headers);
       if(response.data.error){
         Swal.fire({
           position: "top-",
@@ -95,15 +95,16 @@ const Land = () => {
 
 
 
-
+//Delete Student Record From the Databse
   const handleRemove = async(event)=>{
     event.preventDefault()
+    handleClose()
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     console.log(formJson);
     try {
-      let response = await axios.post('https://attendencebackend-23tk.onrender.com/api/updatestudent',formJson,headers)
-      handleClose()
+      let response = await axios.post('http://localhost:5000/api/updatestudent',formJson,headers)
+      
       console.log(response.data)
       if(response.data.error){
         Swal.fire({
@@ -138,15 +139,16 @@ const Land = () => {
 
 
 
-
+//Add a New Student To The Database
   const handleSubmit = async(event)=>{
+    handleClose()
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     console.log(formJson);
     try {
-      let response = await axios.post('https://attendencebackend-23tk.onrender.com/api/addstudent',formJson,headers);
-      handleClose()
+      let response = await axios.post('http://localhost:5000/api/addstudent',formJson,headers);
+    
       if(response.data.error){
         Swal.fire({
           position: "top-",

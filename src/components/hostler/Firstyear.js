@@ -17,7 +17,7 @@ const Firstyear = () => {
           }
         }
             try {
-                let response =await axios.get('https://attendencebackend-23tk.onrender.com/api/getstudent',headers);
+                let response =await axios.get('http://localhost:5000/api/getstudent',headers);
                 setStudentData(response.data)
                console.log("this is student data",studentData);
              
@@ -46,7 +46,7 @@ const Firstyear = () => {
       }
       console.log(Data)
       try {
-        const response=await axios.post('https://attendencebackend-23tk.onrender.com/api/markattendece1',Data,headers);
+        const response=await axios.post('http://localhost:5000/api/markattendece1',Data,headers);
         console.log(response.data);
         if(response.data.success){
           Swl.fire({
@@ -90,8 +90,8 @@ const Firstyear = () => {
             <tr>
               <td>{student.Name}</td>
               <td>{student.Mobile}</td>
-              <td><button ref={btnRef} className={css.btn} value={'present'} onClick={(e)=>{markPresent(e,student.Name,student.Mobile)}}>P</button></td>
-              <td><button ref={btnRef} className={css.btn} value={'absent'} onClick={(e)=>{markPresent(e,student.Name,student.Mobile)}}>A</button></td>
+              <td><button ref={btnRef} id={css.pres} className={css.btn} value={'present'} onClick={(e)=>{markPresent(e,student.Name,student.Mobile)}}>P</button></td>
+              <td><button ref={btnRef} id={css.abs} className={css.btn} value={'absent'} onClick={(e)=>{markPresent(e,student.Name,student.Mobile)}}>A</button></td>
             </tr>:''
           ))
         }

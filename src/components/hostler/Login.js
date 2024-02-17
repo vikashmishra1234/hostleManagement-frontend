@@ -19,6 +19,7 @@ const Login = () => {
     const Navigete = useNavigate()
 
     const handleSubmit = async(e)=>{
+  
         e.preventDefault()
     
         const stuData = {
@@ -33,7 +34,7 @@ const Login = () => {
               "Content-Type":"application/json"
             }
           }
-         let response = await axios.post('https://attendencebackend-23tk.onrender.com/api/adminlogin',stuData,headers);
+         let response = await axios.post('http://localhost:5000/api/adminlogin',stuData,headers);
          if(response.data.error){
 
            Swal.fire({
@@ -45,6 +46,7 @@ const Login = () => {
           });
          }
          else{
+          sessionStorage.setItem("authtoken",response.data.token)
           localStorage.setItem("token",response.data.token)
           Swal.fire({
             position: "top-",

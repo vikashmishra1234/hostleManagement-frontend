@@ -1,22 +1,56 @@
 .container{
  
 background-color: antiquewhite;
-  height: 91vh;
+  height: fit-content;
+  padding: 20px;
  
   table{
-       position: relative;
-       top: 5%;
-       left: 10%;
     
-       width: 60%;
-       tr{
+       position: relative;
+       ;
+       left: 6%;
+    
+       width: 80%;
+      tr{
+      //     text-align: center;
         th{
-            padding: 10px;
+            padding: 7px;
             font-size: 21px;
         }
         td{
-            padding: 15px;
+            
             font-size: 18px;
+            text-align: center;
+            padding: 5px;
+            .btn{
+           
+              width: 5vw;
+              padding: 5px;
+              height: 32px;
+              font-size: 15px;
+              color: rgb(77, 75, 75);
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              
+            }
+            #pres{
+              background-color: rgb(38, 205, 38);
+              transition: 0.1s ease-in;
+            }
+            #abs{
+              background: rgb(232, 81, 81);
+
+            }
+            #pres:hover{
+              background-color: greenyellow;
+              color: rgb(59, 57, 57);
+
+            }
+            #abs:hover{
+                background-color: red;
+               
+            }
         
         
             
@@ -24,3 +58,32 @@ background-color: antiquewhite;
        }
      }
    }
+   
+ 
+  @media only screen and (max-width: 600px) {
+    .container{
+      table{
+        width: 100%;
+        left: 1%;
+   
+        tr{
+          
+          th{
+              padding: 3px;
+              font-size: 4vw;
+          }
+          td{
+              padding: 4px;
+              font-size: 3vw;
+              .btn{
+                width: 8vw;
+                
+              }
+          
+              
+          }
+         }
+      }
+    }
+
+  }

@@ -19,13 +19,14 @@ color:#fff;
 const Links = styled(Box)`
   display:flex;
   justify-content:space-around;
-  width:30%;
+  width:40%;
 
  
 `
 
 
 const Navbar = () => {
+  const authtoken =  sessionStorage.getItem("authtoken");
   const Navigate = useNavigate()
   const a = useContext(AdminContext)
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -39,9 +40,9 @@ const Navbar = () => {
 
  
   return (
-      <Box sx={{height:'7.55vh'}}>
+      <>
 
-        <AppBar position='fixed' sx={{bgcolor:'#077707'}} component={'nav'}>
+        <AppBar  position='sticky' sx={{bgcolor:'##2f748e'}} component={'nav'}>
           <Toolbar sx={{display:{xs:'flex'},justifyContent:{xs:'space-between'}}}>
             <Drawerr/>
             <Typography
@@ -54,6 +55,7 @@ const Navbar = () => {
             ><FaUniversity  size={35}  /> <span style={{marginLeft:'10px'}}>Bsa Hostle</span> </Typography>
   
             <Links id='link' sx={{display:{xs:'none',sm:'flex'}}} >
+              <Link to='/'>Home</Link>
               <Link to='/mess'>Mess</Link>
               <Link to='/about'>About</Link>
               <Link to='/admin'>Admin</Link>
@@ -66,7 +68,7 @@ const Navbar = () => {
       <Button
      
       
-        // sx={{display:`${a.Logined?'block':'none'}`}}
+        sx={{display:`${authtoken?'block':'none'}`}}
         variant='contained'
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
@@ -97,7 +99,7 @@ const Navbar = () => {
             
           </Toolbar>
         </AppBar>
-      </Box>
+      </>
         
       
   )
