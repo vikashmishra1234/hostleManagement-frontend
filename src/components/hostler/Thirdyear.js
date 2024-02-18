@@ -2,10 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import css from '../hostle/css/Firstyear.module.scss';
 import Swl from 'sweetalert2';
+import { BeatLoader } from 'react-spinners';
+import { Dialog } from '@mui/material';
 
 
 const Thirdyear = () => {
     const [studentData,setStudentData]= useState([]);
+    const [Loader,setLoader] = useState(false)
     const btnRef = useRef();
       useEffect(()=>{
         
@@ -17,13 +20,22 @@ const Thirdyear = () => {
             }
           }
               try {
+                setLoader(true)
                   let response =await axios.get('http://localhost:5000/api/getstudent',headers);
+                  setLoader(false)
                   setStudentData(response.data)
                  console.log("this is student data",studentData);
                
                   
               } catch (error) {
-                  console.log(error.message);
+                setLoader(false)
+                Swl.fire({
+                  position: "top-",
+                  icon: "error",
+                  title: `${error.message}`,
+                  showConfirmButton: true,
+                 
+                });
                   
               }
   
@@ -44,17 +56,19 @@ const Thirdyear = () => {
             "Content-Type":"application/json"
           }
         }
-        console.log(Data)
+     
         try {
+          setLoader(true)
           const response=await axios.post('http://localhost:5000/api/markattendece3',Data,headers);
+          setLoader(false)
           console.log(response.data);
           if(response.data.success){
             Swl.fire({
               position: "top-",
               icon: "success",
               title: `${response.data.message}`,
-              showConfirmButton: false,
-              timer: 1500
+              showConfirmButton: true,
+             
             });
           }
           else{
@@ -62,12 +76,19 @@ const Thirdyear = () => {
                 position: "top-",
                 icon: "error",
                 title: `${response.data.error}`,
-                showConfirmButton: false,
-                timer: 1500
+                showConfirmButton: true,
+               
               });
           }
         } catch (error) {
-          console.log("unable to send data",error.message);
+          setLoader(false)
+          Swl.fire({
+            position: "top-",
+            icon: "error",
+            title: `${error.message}`,
+            showConfirmButton: true,
+           
+          });
           
         }
   
@@ -77,6 +98,11 @@ const Thirdyear = () => {
      
       
         <div className={css.container }>
+          <Dialog open={Loader}>
+            <div style={{padding:'30px'}}>
+              <BeatLoader></BeatLoader>
+            </div>
+          </Dialog>
         <table cellSpacing={0} border={'1px'}>
           <tr>
             <th>Student Name</th>
