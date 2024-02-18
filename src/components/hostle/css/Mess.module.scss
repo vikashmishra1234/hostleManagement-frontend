@@ -1,83 +1,48 @@
-.block {
-  height: fit-content;
-  
-  background-image: linear-gradient(#0F2027,#2C5364);
- 
-  .wrapper {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+background-color: #6dd5ed;
+height: fit-content;
+  // background-image: linear-gradient("#373B44", #4286f4);
+
+  .container {
     display: flex;
-    flex-direction: column;
-      
+    justify-content: space-around;
+    height: 50%;
+  
 
-    .container {
-      display: flex;
-      justify-content: space-around;
-     margin:15px 0px 15px 0px;
-      .block1 {
-        .card {
-          width: 23vw;
-          background-color: black;
-          div:hover {
-            background-color: aqua;
-            transition: ease-in 0.3s;
-            color: rgb(37, 36, 36);
-            transition: all 1.3 linear;
-          }
-
-          div {
-            background-image: linear-gradient(#57faf5,#48c2ef);
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            h3 {
-              font-size: 24px;
-              border-bottom: 1px solid rgb(141, 136, 136);
-              width: 100%;
-            }
-            img {
-              width: 80%;
-              border-radius: 10px;
-            }
-          }
-        }
-      }
+    h3 {
+      padding-top: 3px;
+      font-size: 2vw;
+      border-bottom: 1px solid rgb(141, 136, 136);
+      width: 100%;
+    }
+    img {
+      width: 70%;
+     
+      border-radius: 10px;
+    }
+    p{
+      font-size: 1.2vw;
     }
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .block {
-    height: fit-content;
-    h1 {
-      font-size: 9vw;
- 
-    }
-    .wrapper {
-      height: fit-content;
-      .container {
-        flex-direction: column;
-        align-items: center;
-        .block1 {
-          .card {
-            width: 85vw;
-            margin-bottom: 30px;
-           
-            div {
-              background-image: linear-gradient(#2193b0, #6dd5ed);
-              h3 {
-                width: 100%;
-                font-size: 6.5vw;
-               
-                border-bottom: 1px solid rgb(34, 33, 33);
-              }
-             p{
-              background-color: #6dd5ed;
-              width: 100%;
-             }
-            }
-          }
-        }
+  .wrapper{
+    .container{
+      flex-direction: column;
+      align-items: center;
+      h3 {
+       font-size: 6vw;
+       padding-top: 10px;
+      }
+      img {
+        width: 70%;
+      }
+      p{
+        padding-bottom: 3px;
+       font-size: 4vw;
       }
     }
   }

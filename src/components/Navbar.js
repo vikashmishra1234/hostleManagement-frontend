@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
       <>
 
-        <AppBar  position='sticky' sx={{bgcolor:'##2f748e'}} component={'nav'}>
+        <AppBar  position='sticky' sx={{bgcolor:{sm:'green',xs:'#12a8de'}}} component={'nav'}>
           <Toolbar sx={{display:{xs:'flex'},justifyContent:{xs:'space-between'}}}>
             <Drawerr/>
             <Typography

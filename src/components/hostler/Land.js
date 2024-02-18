@@ -11,12 +11,16 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { BeatLoader } from 'react-spinners';
 
 const Land = () => {
  
   const [open, setOpen] = React.useState(false);
   const [remove,setRemove]=useState(false)
   const [attendence,setAttendence]=useState(false)
+  const [Loading,setLoading]=useState(false)
+
+
   const headers = {
     headers:{
       "Authorization":`bearer ${localStorage.getItem("token")}`,
@@ -29,13 +33,16 @@ const Land = () => {
 //Find Student or Check Presence of Student
   const handleFinde = async(event)=>{
     event.preventDefault()
-    handleClose()
+
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     console.log("this is attendence foem",formJson);
     try {
+      setLoading(true)
       let response = await axios.post('http://localhost:5000/api/checkattendence',formJson,headers);
+      setLoading(false)
       if(response.data.error){
+        handleClose()
         Swal.fire({
           position: "top-",
           icon: "error",
@@ -44,6 +51,7 @@ const Land = () => {
           timer: 1500
         });
       }else{
+        handleClose()
         Swal.fire({
           position: "top-",
           icon: "success",
@@ -54,6 +62,7 @@ const Land = () => {
       }
       console.log(response.data)
     } catch (error) {
+      handleClose()
       console.log("unable to Find ",error.message);
       Swal.fire({
         position: "top-",
@@ -98,15 +107,18 @@ const Land = () => {
 //Delete Student Record From the Databse
   const handleRemove = async(event)=>{
     event.preventDefault()
-    handleClose()
+   
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     console.log(formJson);
     try {
+      setLoading(true)
       let response = await axios.post('http://localhost:5000/api/updatestudent',formJson,headers)
+      setLoading(false)
       
       console.log(response.data)
       if(response.data.error){
+        handleClose()
         Swal.fire({
           position: "top-",
           icon: "error",
@@ -115,6 +127,7 @@ const Land = () => {
           timer: 1500
         });
       }else{
+        handleClose()
         Swal.fire({
           position: "top-",
           icon: "success",
@@ -124,6 +137,7 @@ const Land = () => {
         });
       }
     } catch (error) {
+      handleClose()
       console.log(error.message)
       Swal.fire({
         position: "top-",
@@ -141,15 +155,18 @@ const Land = () => {
 
 //Add a New Student To The Database
   const handleSubmit = async(event)=>{
-    handleClose()
+   
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     console.log(formJson);
     try {
+      setLoading(true)
       let response = await axios.post('http://localhost:5000/api/addstudent',formJson,headers);
+      setLoading(false)
     
       if(response.data.error){
+        handleClose()
         Swal.fire({
           position: "top-",
           icon: "error",
@@ -158,6 +175,7 @@ const Land = () => {
           timer: 1500
         });
       }else{
+        handleClose()
         Swal.fire({
           position: "top-",
           icon: "success",
@@ -168,6 +186,7 @@ const Land = () => {
       }
       console.log(response.data)
     } catch (error) {
+      handleClose()
       console.log("unable to resister ",error.message);
       Swal.fire({
         position: "top-",
@@ -239,7 +258,7 @@ const Land = () => {
 
         <DialogActions>
          <Button onClick={handleClose}>Cancel</Button>
-         <Button variant='contained' type="submit">Find</Button>
+         <Button variant='contained' type="submit">{Loading?<BeatLoader/>:'Find'}</Button>
        </DialogActions>
       
     </Dialog>
@@ -261,7 +280,7 @@ const Land = () => {
 
         <DialogActions>
          <Button onClick={handleClose}>Cancel</Button>
-         <Button variant='contained' type="submit">Remove</Button>
+         <Button variant='contained' type="submit">{Loading?<BeatLoader/>:'Remove'}</Button>
        </DialogActions>
       
     </Dialog>
@@ -323,7 +342,7 @@ const Land = () => {
        </DialogContent>
        <DialogActions sx={{margin:'0px 5px 15px 0px'}}>
          <Button onClick={handleClose}>Cancel</Button>
-         <Button variant='contained' type="submit">Resister</Button>
+         <Button variant='contained' type="submit">{Loading?<BeatLoader/>:'Resister'}</Button>
        </DialogActions>
      </Dialog>
    </React.Fragment>

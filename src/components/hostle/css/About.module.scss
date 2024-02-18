@@ -3,20 +3,21 @@
     margin-top: -35px;
     padding: 2px;
     h1{
-        font-size: 50px;
+        
         margin-left: 20px;
     }
     .block1{
         display: flex;
         justify-content: space-around;
+        align-items: center;
         margin-top: 25px;
         img{
-            height: 45vh;
-    width: 26vw;
+            height: 41vh;
+    width: 27vw;
             border-radius:10px ;
         }
         p{
-            font-size: 24px;
+           font-size: 1.8vw;
             border-color: aqua;
             width: 50%;
         }

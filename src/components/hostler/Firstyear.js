@@ -2,10 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import css from '../hostle/css/Firstyear.module.scss';
 import Swl from 'sweetalert2';
+import { BeatLoader } from 'react-spinners';
+import { Dialog, fabClasses } from '@mui/material';
 
 
 const Firstyear = () => {
   const [studentData,setStudentData]= useState([]);
+  const [Loader,setLoder]=useState(false);
   const btnRef = useRef();
     useEffect(()=>{
       
@@ -17,7 +20,9 @@ const Firstyear = () => {
           }
         }
             try {
+              setLoder(true)
                 let response =await axios.get('http://localhost:5000/api/getstudent',headers);
+                setLoder(false)
                 setStudentData(response.data)
                console.log("this is student data",studentData);
              
@@ -46,15 +51,17 @@ const Firstyear = () => {
       }
       console.log(Data)
       try {
+        setLoder(true)
         const response=await axios.post('http://localhost:5000/api/markattendece1',Data,headers);
+        setLoder(false)
         console.log(response.data);
         if(response.data.success){
           Swl.fire({
             position: "top-",
             icon: "success",
             title: `${response.data.message}`,
-            showConfirmButton: false,
-            timer: 1500
+            showConfirmButton: true,
+            
           });
         }
         else{
@@ -62,11 +69,19 @@ const Firstyear = () => {
             position: "top-",
             icon: "error",
             title: `${response.data.error}`,
-            showConfirmButton: false,
-            timer: 1500
+            showConfirmButton: true,
+        
           });
         }
       } catch (error) {
+        setLoder(false)
+        Swl.fire({
+          position: "top-",
+          icon: "error",
+          title: `${error.message}`,
+          showConfirmButton: true,
+      
+        });
         console.log("unable to send data",error.message);
         
       }
@@ -77,6 +92,11 @@ const Firstyear = () => {
    
     
       <div className={css.container }>
+        <Dialog  open={Loader}> 
+          <div style={{padding:'30px'}}>
+           <BeatLoader/>
+          </div>
+        </Dialog>
       <table cellSpacing={0} border={'1px'}>
         <tr>
           <th>Student Name</th>

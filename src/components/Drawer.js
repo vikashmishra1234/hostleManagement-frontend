@@ -11,7 +11,15 @@ import { GrUserAdmin } from "react-icons/gr";
 
 const NewContainer = styled(Container)(
   { height:'100%',
-    paddingTop:'60px'
+    paddingTop:'60px',
+    background:'#50989a'
+}
+)
+const Li = styled(MenuItem)(
+  {gap:'7px',backgroundColor:'rgb(221, 218, 218)',
+  borderRadius:'12px',
+  fontFamily:'cursive',
+  fontSize:'20px'
 }
 )
 
@@ -36,7 +44,7 @@ const Drawerr=()=> {
     <Box  sx={{display:{xs:'block',sm:'none'}}}  >
       {['left'].map((anchor) => (
         <React.Fragment   key={'left'} >
-            <GiHamburgerMenu size={35} onClick={toggleDrawer('left', true)} />
+            <GiHamburgerMenu size={31} color='#726e6e' onClick={toggleDrawer('left', true)} />
         
           <Drawer
           
@@ -49,10 +57,10 @@ const Drawerr=()=> {
          
         <NewContainer sx={{width:{xs:'40vw',sm:'20vw'}}} >
 
-             <MenuItem  sx={{gap:'7px',backgroundColor:'rgb(221, 218, 218)'}}> <IoMdHome size={'30px'} /><Link to='/' > Home</Link></MenuItem> <Divider/>
-             <MenuItem  sx={{gap:'7px',backgroundColor:'rgb(221, 218, 218)'}}> <SiIfood size={'30px'} /> <Link to='/mess'> Mess</Link></MenuItem> <Divider/>
-             <MenuItem  sx={{gap:'7px',backgroundColor:'rgb(221, 218, 218)'}}><FcAbout size={'30px'} /> <Link to='/about'> About</Link></MenuItem>  <Divider/>
-             <MenuItem  sx={{gap:'7px',backgroundColor:'rgb(221, 218, 218)'}}><GrUserAdmin size={'30px'} /> <Link to='/admin'> Admin</Link></MenuItem>  <Divider/>
+             <Li  > <IoMdHome size={'30px'} /><Link to='/' > Home</Link></Li> <Divider/>
+             <Li  > <SiIfood size={'30px'} /> <Link to='/mess'> Mess</Link></Li> <Divider/>
+             <Li ><FcAbout size={'30px'} /> <Link to='/about'> About</Link></Li>  <Divider/>
+             <Li  ><GrUserAdmin size={'30px'} /> <Link to='/admin'> Admin</Link></Li>  <Divider/>
         </NewContainer>
             
                     

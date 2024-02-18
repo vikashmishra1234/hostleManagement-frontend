@@ -6,120 +6,116 @@ import Fade from "react-reveal/Fade";
 
 const Mess = () => {
   return (
-    <div className={`${css.block}`}>
-      
-
       <div className={`${css.wrapper}`}>
         <div className={`${css.container}`}>
-          <div className={`${css.block1}`}>
+          
             <Fade duration={100}>
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+                 
+                    <h3>Kadi (Mon)</h3>
 
-            <div className={`${css.card}`}>
-              <Paper elevation={10}>
-                <div>
-                  <h3>Kadi  (Mon)</h3>
-
-                  <img src={Rajma} />
-                  <p>
-                    Flavorful red kidney in tomato <br />
-                    based gravy with spices
-                  </p>
-                </div>
-              </Paper>
-            </div>
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                      based gravy with spices
+                    </p>
+                
+                </Paper>
             </Fade>
-          </div>
-          <div className={`${css.block1}`}>
+            <Fade duration={100}>
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+                 
+                    <h3>Kadi (Mon)</h3>
+
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                      based gravy with spices
+                    </p>
+                
+                </Paper>
+            </Fade>
+        
+         
             <Fade duration={500}>
-
-            <div className={`${css.card}`}>
-              <Paper elevation={10}>
-                <div>
-                  <h3>Rajma Chawal (Tue)</h3>
-                  <img src={Rajma} />
-                  <p>
-                    Flavorful red kidney in tomato
-                    <br /> based gravy with spices
-                  </p>
-                </div>
-              </Paper>
-            </div>
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+                 
+                    <h3>Rajma Chawal</h3>
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                      based gravy with spices
+                    </p>
+                
+                </Paper>
             </Fade>
-          </div>
-          <div className={`${css.block1}`}>
-              <Fade duration={800}>
-
-            <div className={`${css.card}`}>
-              <Paper elevation={10}>
-                <div>
-                <h3>Rajma Chawal (Tue)</h3>
-                  <img src={Rajma} />
-                  <p>
-                    Flavorful red kidney in tomato <br />
-                    based gravy with spices
-                  </p>
-                </div>
-              </Paper>
-            </div>
-              </Fade>
-          </div>
+         
+         
+            <Fade duration={800}>
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+             
+                    <h3>Rajma Chawal</h3>
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                      based gravy with spices
+                    </p>
+                 
+                </Paper>
+            </Fade>
+       
         </div>
         <div className={`${css.container}`}>
-          <div className={`${css.block1}`}>
+          
             <Fade duration={1200}>
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+                
+                    <h3>Rajma Chawal</h3>
 
-            <div className={`${css.card}`}>
-              <Paper elevation={10}>
-                <div>
-                <h3>Rajma Chawal (Tue)</h3>
-
-                  <img src={Rajma} />
-                  <p>
-                    Flavorful red kidney in tomato <br />
-                    based gravy with spices
-                  </p>
-                </div>
-              </Paper>
-            </div>
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                      based gravy with spices
+                    </p>
+                
+                </Paper>
+           
             </Fade>
-          </div>
-          <div className={`${css.block1}`}>
+          
+         
             <Fade duration={1500}>
-
-            <div className={`${css.card}`}>
-              <Paper elevation={10}>
-                <div>
-                <h3>Rajma Chawal (Tue)</h3>
-                  <img src={Rajma} />
-                  <p>
-                    Flavorful red kidney in tomato
-                    <br /> based gravy with spices
-                  </p>
-                </div>
-              </Paper>
-            </div>
+              
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+                  
+                    <h3>Rajma Chawal</h3>
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                     based gravy with spices
+                    </p>
+               
+                </Paper>
+            
             </Fade>
-          </div>
-          <div className={`${css.block1}`}>
+        
+          
             <Fade duration={2000}>
-
-            <div className={`${css.card}`}>
-              <Paper elevation={10}>
-                <div>
-                <h3>Rajma Chawal (Tue)</h3>
-                  <img src={Rajma} />
-                  <p>
-                    Flavorful red kidney in tomato <br />
-                    based gravy with spices
-                  </p>
-                </div>
-              </Paper>
-            </div>
+                <Paper sx={{width:{xs:'70vw',sm:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
+              
+                 
+                    <h3>Rajma Chawal</h3>
+                    <img src={Rajma} />
+                    <p>
+                      Flavorful red kidney in tomato
+                      based gravy with spices
+                    </p>
+                
+              
+                </Paper>
             </Fade>
-          </div>
+        
         </div>
       </div>
-    </div>
   );
 };
 

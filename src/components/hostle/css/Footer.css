@@ -78,7 +78,7 @@ a{
         color: rgb(141, 136, 136);
         flex-direction: column;
         margin-left: 20px;
-        height: 27vh;
+        height: fit-content;
         justify-content: space-between;
         font-size: 19px;
     

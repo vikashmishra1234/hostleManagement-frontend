@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import axios from 'axios';
 import AdminContext from '../context/AdminContext';
+import { BeatLoader } from 'react-spinners';
 
 
 
@@ -16,9 +17,12 @@ const Login = () => {
   const a = useContext(AdminContext)
     const [Name,setName] = useState('')
     const [Password,setPassword] = useState('')
+    const [Loading,setLoding]=useState(false)
     const Navigete = useNavigate()
 
     const handleSubmit = async(e)=>{
+      setLoding(true)
+  
   
         e.preventDefault()
     
@@ -35,6 +39,7 @@ const Login = () => {
             }
           }
          let response = await axios.post('http://localhost:5000/api/adminlogin',stuData,headers);
+         setLoding(false)
          if(response.data.error){
 
            Swal.fire({
@@ -60,6 +65,7 @@ const Login = () => {
             a.setLogin(true)
          }
         } catch (error) {
+          setLoding(false)
           console.log(error.message)
           Swal.fire({
             position: "top-",
@@ -80,7 +86,7 @@ const Login = () => {
         <h2>Login</h2>
         <TextField name='Name' value={Name} onChange={(e)=>{setName(e.target.value)}}  required fullWidth className={css.input} type='text' label="Your Roll No" variant='standard'/>
         <TextField name='Password' value={Password} onChange={(e)=>{setPassword(e.target.value)}} required fullWidth className={css.input} label="password" type='password' variant='standard'/>
-        <Button component={'button'} fullWidth variant='contained' type='submit'>Login</Button>
+        <Button component={'button'} fullWidth variant='contained' type='submit'>{Loading?<BeatLoader size={'12px'}/>:'Login'}</Button>
     </form>
   </div>
 
