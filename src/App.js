@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 import Mess from './components/hostle/Mess';
 import About from './components/hostle/About';
-import Home from './components/hostle/Home';
 import Components from './components/Components';
 import Login from './components/hostler/Login';
 import Land from './components/hostler/Land';
@@ -17,7 +16,6 @@ import SecondYear from './components/hostler/SecondYear';
 import Thirdyear from './components/hostler/Thirdyear';
 import Fourthyear from './components/hostler/Fourthyear';
 import AdminState from './components/context/AdminState';
-import  Drawer  from './components/Drawer';
 import Contact from './components/hostle/Contact';
 import Fotter from './components/hostle/Fotter';
 

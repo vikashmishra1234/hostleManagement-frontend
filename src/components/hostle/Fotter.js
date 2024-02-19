@@ -10,7 +10,7 @@ import{ Link }from 'react-router-dom'
 import { RiFolderUnknowLine } from "react-icons/ri";
 import { IoMdHome } from "react-icons/io";
 import { MdPermContactCalendar } from "react-icons/md";
-import {Divider }from '@mui/material';
+
 
 
 const Fotter = () => {

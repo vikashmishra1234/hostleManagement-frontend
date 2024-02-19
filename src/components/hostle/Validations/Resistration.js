@@ -1,9 +1,12 @@
-import * as yup from 'yup'
+import * as Yup from 'yup'
 
-export const ResistrationSchema = yup.object({
-    name:yup.string().min(2).max(13).required("Name is required"),
-    email:yup.string().email().required("email is required"),
-    id:yup.string().min(4).max(13).required("id is required"),
-    year:yup.string().min(1).max(1).required("year is required"),
-    phone:yup.string().min(10).max(10).required("phone is required"),
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
+
+export const ResistrationSchema = Yup.object({
+    name:Yup.string().min(2).max(25).required("Name is required"),
+    email:Yup.string().email().required("email is required"),
+    year:Yup.string().min(1).max(1).required("year is required"),
+    id:Yup.string().min(4).max(13).required("id is required"),
+    phone:Yup.string().matches(phoneRegExp, 'Phone number is not valid').min(10).max(10)
 })
