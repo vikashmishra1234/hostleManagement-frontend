@@ -37,7 +37,7 @@ const Fotter = () => {
           <div className='flexCol ' >
             <h4>Reach Us</h4>
           <span className='span'><IoMdHome/> Mathura</span>
-          <span className='span'><MdEmail/> vikash12@gmail.com</span>
+          <span className='span'><MdEmail/> bsacet@gmail.com</span>
           <span className='span'><FaPhoneAlt/> +91 8979481819</span>
           </div>
 

@@ -22,6 +22,7 @@ import Contact from './components/hostle/Contact';
 import Fotter from './components/hostle/Fotter';
 
 function App() {
+  const allow = sessionStorage.getItem("authtoken");
   return (
     <>
   <AdminState>
@@ -34,7 +35,7 @@ function App() {
           <Route exact path='/mess' element={<Mess/>}/>
           <Route exact path='/about' element={<About/>}/>
           <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path='/admin' element={<Login/>}/>
+          <Route exact path={`${allow?'/admin/login/land':'/admin'}`} element={<Login/>}/>
           <Route exact path='/admin/login/land' element={<Land/>}/>
           <Route exact path='/admin/login/land/firstyear' element={<Firstyear/>}/>
           <Route exact path='/admin/login/land/secondyear' element={<SecondYear/>}/>

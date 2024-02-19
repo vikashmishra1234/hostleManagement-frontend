@@ -1,6 +1,6 @@
 .wrapper{
    height: 100vh;
-    animation: change 20s infinite ease-in-out;
+    animation: change 10s infinite ease-in-out;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,16 +56,17 @@
  
 }
 @keyframes change{
+  
     0%{
         background-image: url('./utils/1.jpg');
     }
-    30%{
+    25%{
         background-image: url('./utils/2.jpg');
     }
-   60%{
+   50%{
         background-image: url('./utils/3.jpg');
     }
-   85%{
+   75%{
         background-image: url('./utils/2.jpg');
     }
    100%{

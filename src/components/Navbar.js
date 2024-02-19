@@ -27,6 +27,7 @@ const Links = styled(Box)`
 
 const Navbar = () => {
   const authtoken =  sessionStorage.getItem("authtoken");
+  const allow = sessionStorage.getItem("authtoken")
   const Navigate = useNavigate()
   const a = useContext(AdminContext)
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -58,7 +59,7 @@ const Navbar = () => {
               <Link to='/'>Home</Link>
               <Link to='/mess'>Mess</Link>
               <Link to='/about'>About</Link>
-              <Link to='/admin'>Admin</Link>
+              <Link to={`${allow?'/admin/login/land':'/admin'}`}>Admin</Link>
    
 
                 
