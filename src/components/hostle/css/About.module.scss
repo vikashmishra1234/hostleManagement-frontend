@@ -35,8 +35,8 @@
             align-items: center;
             font-size: 6vw;
             img{
-              width: 80%;
-              height: 40vh;
+              width: 84% !important;
+              height: 45vh !important;
             
             }
             p{
@@ -47,4 +47,32 @@
             }
         }
     }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .Container{
+       
+        h1{
+           
+        }
+        .block1{
+          gap: 20px;
+          padding-left: 13px;
+       
+           
+            img{
+              width: 65%;
+              height: 47vh;
+            
+            }
+            p{
+                width: 90%;
+                font-size: 19px;
+               
+              
+            }
+        }
+    }
+
 }

@@ -16,7 +16,7 @@ import { Paper } from "@mui/material";
 export default function App() {
   return (
     <>
-      <Box sx={{ paddingTop: "20px", height: { xs: "119vw", sm: "100vh" } }}>
+      <Box sx={{ paddingTop: "20px", height: { xs: "109vw", sm: "77vh",md:'100vh' } }}>
         <Typography
           sx={{
             fontWeight: "550",
@@ -29,7 +29,7 @@ export default function App() {
         </Typography>
 
         <Swiper
-          style={{ height: "87%", paddingBottom: "30px", textAlign: "center" }}
+          style={{ height: "81%", paddingBottom: "40px", textAlign: "center" }}
           autoplay={{
             delay: "2500",
             disableOnInteraction: false,
@@ -38,7 +38,7 @@ export default function App() {
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination,Autoplay]}
           className="mySwiper"
         >
           <SwiperSlide>
@@ -47,15 +47,15 @@ export default function App() {
                 width: { xs: "69vw", sm: "40vw" },
                 position: "absolute",
                 left: "14%",
-                top: "6%",
+                top: "14%",
               }}
             >
               <Paper
                 elevation={12}
                 sx={{
                   height: "fit-content",
-                  padding: "20px",
-                  fontSize: { xs: "3.8", sm: "1.56vw" },
+                  padding: "15px",
+                  fontSize: { xs: "3.8", sm: "2vw",md:'1.56vw' },
                 }}
               >
                 <img style={{ height: "20px" }} src={In1} alt="" />
@@ -75,38 +75,37 @@ export default function App() {
                 }}
               >
                 <Avatar
-                  sx={{ height: { xs: "54px", sm: "62px" }, width: {xs:'57px',sm:'60px'} }}
+                  sx={{ height: { xs: "51px", sm: "50px",md:'52px' }, width: {xs:'57px',sm:'60px'} }}
                 >
-                  V
+                 M
                 </Avatar>
-                <Box sx={{ marginBottom: "20px", fontSize: { xs: "16px" } }}>
-                  Vikash Mishra{" "}
+                <Box sx={{ marginBottom: "20px", fontSize: { xs: "15px" } }}>
+                 Mohan Mishra
                   <small style={{ display: "block" }}>Studying</small>
                 </Box>
               </Box>
             </Box>
           </SwiperSlide>
-
           <SwiperSlide>
             <Box
               sx={{
                 width: { xs: "69vw", sm: "40vw" },
                 position: "absolute",
                 left: "14%",
-                top: "6%",
+                top: "14%",
               }}
             >
               <Paper
                 elevation={12}
                 sx={{
                   height: "fit-content",
-                  padding: "20px",
-                  fontSize: { xs: "3.8", sm: "1.56vw" },
+                  padding: "15px",
+                  fontSize: { xs: "3.8", sm: "2vw",md:'1.56vw' },
                 }}
               >
                 <img style={{ height: "20px" }} src={In1} alt="" />
-                Security measures are effective, with vigilant personnel and
-                accessible emergency protocols.
+                The hostel offers a vibrant community atmosphere with engaging
+                events and a conducive study environment.
                 <img style={{ height: "15px" }} src={In2} alt="" />
               </Paper>
               <Box
@@ -121,38 +120,37 @@ export default function App() {
                 }}
               >
                 <Avatar
-                  sx={{ height: { xs: "54px", sm: "62px" }, width: {xs:'57px',sm:'60px'} }}
+                  sx={{ height: { xs: "51px", sm: "50px",md:'52px' }, width: {xs:'57px',sm:'60px'} }}
                 >
-                  A
+                 A
                 </Avatar>
-                <Box sx={{ marginBottom: "20px", fontSize: { xs: "16px" } }}>
-                  Amit Sharma
-                  <small style={{ display: "block" }}>Pass Out</small>
+                <Box sx={{ marginBottom: "20px", fontSize: { xs: "15px" } }}>
+                  Ajay Yadav
+                  <small style={{ display: "block" }}>Studying</small>
                 </Box>
               </Box>
             </Box>
           </SwiperSlide>
-
           <SwiperSlide>
             <Box
               sx={{
                 width: { xs: "69vw", sm: "40vw" },
                 position: "absolute",
                 left: "14%",
-                top: "6%",
+                top: "14%",
               }}
             >
               <Paper
                 elevation={12}
                 sx={{
                   height: "fit-content",
-                  padding: "20px",
-                  fontSize: { xs: "3.8", sm: "1.56vw" },
+                  padding: "15px",
+                  fontSize: { xs: "3.8", sm: "2vw",md:'1.56vw' },
                 }}
               >
                 <img style={{ height: "20px" }} src={In1} alt="" />
-                The staff members are approachable, provide prompt assistance,
-                and exhibit professional conduct.
+                The hostel offers a vibrant community atmosphere with engaging
+                events and a conducive study environment.
                 <img style={{ height: "15px" }} src={In2} alt="" />
               </Paper>
               <Box
@@ -167,38 +165,37 @@ export default function App() {
                 }}
               >
                 <Avatar
-                  sx={{ height: { xs: "54px", sm: "62px" }, width: {xs:'57px',sm:'60px'} }}
+                  sx={{ height: { xs: "51px", sm: "50px",md:'52px' }, width: {xs:'57px',sm:'60px'} }}
                 >
-                 R
+                R
                 </Avatar>
-                <Box sx={{ marginBottom: "20px", fontSize: { xs: "16px" } }}>
-               Rakesh gaur
-                  <small style={{ display: "block" }}>Pass Out</small>
+                <Box sx={{ marginBottom: "20px", fontSize: { xs: "15px" } }}>
+                 Rakesh Sharma
+                  <small style={{ display: "block" }}>Studying</small>
                 </Box>
               </Box>
             </Box>
           </SwiperSlide>
-
           <SwiperSlide>
             <Box
               sx={{
                 width: { xs: "69vw", sm: "40vw" },
                 position: "absolute",
                 left: "14%",
-                top: "6%",
+                top: "14%",
               }}
             >
               <Paper
                 elevation={12}
                 sx={{
                   height: "fit-content",
-                  padding: "20px",
-                  fontSize: { xs: "3.8", sm: "1.56vw" },
+                  padding: "15px",
+                  fontSize: { xs: "3.8", sm: "2vw",md:'1.56vw' },
                 }}
               >
                 <img style={{ height: "20px" }} src={In1} alt="" />
-                The room is spacious with comfortable beds, clean facilities,
-                and a cozy ambiance.
+                The hostel offers a vibrant community atmosphere with engaging
+                events and a conducive study environment.
                 <img style={{ height: "15px" }} src={In2} alt="" />
               </Paper>
               <Box
@@ -213,13 +210,13 @@ export default function App() {
                 }}
               >
                 <Avatar
-                  sx={{ height: { xs: "54px", sm: "62px" }, width: {xs:'57px',sm:'60px'} }}
+                  sx={{ height: { xs: "51px", sm: "50px",md:'52px' }, width: {xs:'57px',sm:'60px'} }}
                 >
                   A
                 </Avatar>
-                <Box sx={{ marginBottom: "20px", fontSize: { xs: "16px" } }}>
-                 Ajay Kant
-                  <small style={{ display: "block" }}>Pass Out</small>
+                <Box sx={{ marginBottom: "20px", fontSize: { xs: "15px" } }}>
+               Akash Singh
+                  <small style={{ display: "block" }}>Studying</small>
                 </Box>
               </Box>
             </Box>

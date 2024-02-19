@@ -19,7 +19,7 @@ color:#fff;
 const Links = styled(Box)`
   display:flex;
   justify-content:space-around;
-  width:40%;
+
 
  
 `
@@ -55,7 +55,8 @@ const Navbar = () => {
              fontWeight:'600'}}
             ><FaUniversity  size={35}  /> <span style={{marginLeft:'10px'}}>Bsa Hostle</span> </Typography>
   
-            <Links id='link' sx={{display:{xs:'none',sm:'flex'}}} >
+            <Links id='link' sx={{display:{xs:'none',sm:'flex'},width:{sm:'50%',md:'40%'}
+          }} >
               <Link to='/'>Home</Link>
               <Link to='/mess'>Mess</Link>
               <Link to='/about'>About</Link>

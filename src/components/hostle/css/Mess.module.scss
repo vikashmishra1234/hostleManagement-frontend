@@ -3,8 +3,10 @@
   flex-direction: column;
 background-color: #6dd5ed;
 height: fit-content;
-  // background-image: linear-gradient("#373B44", #4286f4);
-
+h2{
+  margin-left: 35px;
+  font-size: 28px;
+}
   .container {
     display: flex;
     justify-content: space-around;
@@ -12,6 +14,7 @@ height: fit-content;
   
 
     h3 {
+      color: rgb(41, 39, 39);
       padding-top: 3px;
       font-size: 2vw;
       border-bottom: 1px solid rgb(141, 136, 136);
@@ -30,11 +33,14 @@ height: fit-content;
 
 @media only screen and (max-width: 600px) {
   .wrapper{
+    h2{
+      
+    }
     .container{
       flex-direction: column;
       align-items: center;
       h3 {
-       font-size: 6vw;
+       font-size: 6vw !important;
        padding-top: 10px;
       }
       img {
@@ -42,7 +48,24 @@ height: fit-content;
       }
       p{
         padding-bottom: 3px;
-       font-size: 4vw;
+       font-size: 4vw !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  .wrapper{
+    .container{
+      h3{
+        font-size: 3vw;
+      }
+      p{
+        font-size: 2vw;
       }
     }
   }
