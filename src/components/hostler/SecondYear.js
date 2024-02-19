@@ -20,7 +20,7 @@ const SecondYear = () => {
             }
           }
               try {setLoader(true)
-                  let response =await axios.get('http://localhost:5000/api/getstudent',headers);
+                  let response =await axios.get('https://hostlebackend.onrender.com/api/getstudent',headers);
                   setLoader(false)
                   setStudentData(response.data)
                  console.log("this is student data",studentData);
@@ -60,7 +60,7 @@ const SecondYear = () => {
       
         try {
           setLoader(true)
-          const response=await axios.post('http://localhost:5000/api/markattendece2',Data,headers);
+          const response=await axios.post('https://hostlebackend.onrender.com/api/markattendece2',Data,headers);
           setLoader(false)
           if(response.data.success){
             Swl.fire({

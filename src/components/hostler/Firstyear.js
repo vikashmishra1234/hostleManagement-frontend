@@ -21,7 +21,7 @@ const Firstyear = () => {
         }
             try {
               setLoder(true)
-                let response =await axios.get('http://localhost:5000/api/getstudent',headers);
+                let response =await axios.get('https://hostlebackend.onrender.com/api/getstudent',headers);
                 setLoder(false)
                 setStudentData(response.data)
                console.log("this is student data",studentData);
@@ -52,7 +52,7 @@ const Firstyear = () => {
       console.log(Data)
       try {
         setLoder(true)
-        const response=await axios.post('http://localhost:5000/api/markattendece1',Data,headers);
+        const response=await axios.post('https://hostlebackend.onrender.com/api/markattendece1',Data,headers);
         setLoder(false)
         console.log(response.data);
         if(response.data.success){

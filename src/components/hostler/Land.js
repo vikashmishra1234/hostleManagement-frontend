@@ -39,7 +39,7 @@ const Land = () => {
     console.log("this is attendence foem",formJson);
     try {
       setLoading(true)
-      let response = await axios.post('http://localhost:5000/api/checkattendence',formJson,headers);
+      let response = await axios.post('https://hostlebackend.onrender.com/api/checkattendence',formJson,headers);
       setLoading(false)
       if(response.data.error){
         handleClose()
@@ -113,7 +113,7 @@ const Land = () => {
     console.log(formJson);
     try {
       setLoading(true)
-      let response = await axios.post('http://localhost:5000/api/updatestudent',formJson,headers)
+      let response = await axios.post('https://hostlebackend.onrender.com/api/updatestudent',formJson,headers)
       setLoading(false)
       
       console.log(response.data)
@@ -162,7 +162,7 @@ const Land = () => {
     console.log(formJson);
     try {
       setLoading(true)
-      let response = await axios.post('http://localhost:5000/api/addstudent',formJson,headers);
+      let response = await axios.post('https://hostlebackend.onrender.com/api/addstudent',formJson,headers);
       setLoading(false)
     
       if(response.data.error){
