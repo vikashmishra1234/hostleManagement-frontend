@@ -35,7 +35,7 @@ const [Students,setStudents] = useState('0')
     const find =async()=>{
 
       try {
-        const res = await axios.get('http://localhost:5000/api/studentnumber',headers);
+        const res = await axios.get('https://hostle-management-frontend-bvwf.vercel.app/api/studentnumber',headers);
        setStudents(res.data.Students)
       
       } catch (error) {
@@ -58,7 +58,7 @@ const [Students,setStudents] = useState('0')
     console.log("this is attendence foem",formJson);
     try {
       setLoading(true)
-      let response = await axios.post('http://localhost:5000/api/checkattendence',formJson,headers);
+      let response = await axios.post('https://hostle-management-frontend-bvwf.vercel.app/api/checkattendence',formJson,headers);
       setLoading(false)
       if(response.data.error){
         handleClose()
@@ -132,7 +132,7 @@ const [Students,setStudents] = useState('0')
     console.log(formJson);
     try {
       setLoading(true)
-      let response = await axios.post('http://localhost:5000/api/updatestudent',formJson,headers)
+      let response = await axios.post('https://hostle-management-frontend-bvwf.vercel.app/api/updatestudent',formJson,headers)
       setLoading(false)
       
       console.log(response.data)
@@ -192,7 +192,7 @@ const [Students,setStudents] = useState('0')
     console.log(formjson);
     try {
       setLoading(true)
-      let response = await axios.post('http://localhost:5000/api/addstudent',formJson,headers);
+      let response = await axios.post('https://hostle-management-frontend-bvwf.vercel.app/api/addstudent',formJson,headers);
       setLoading(false)
     
       if(response.data.error){
