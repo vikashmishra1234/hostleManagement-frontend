@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Divider} from '@mui/material'
 import css from '../hostle/css/Land.module.scss';
 import AddStudentForm from './AddStudent'
@@ -27,6 +27,24 @@ const Land = () => {
       "Content-Type":"application/json"
     }
   }
+
+  //count of student
+const [Students,setStudents] = useState('0')
+  useEffect(()=>{
+    const find =async()=>{
+
+      try {
+        const res = await axios.get('https://hostle-management-frontend-bvwf.vercel.app/api/studentnumber',headers);
+       setStudents(res.data.Students)
+      
+      } catch (error) {
+        console.log(error.message)
+        
+      }
+    }
+    find()
+
+  })
 
 
 
@@ -224,8 +242,8 @@ const Land = () => {
 
       <div className={css.row1}>
       <div className={css.box}>
-          <h3>Message to Parent</h3>
-          <p>Click here to send message to the parent of the student</p>
+          <h3>Total Students</h3>
+          <p>Students: {Students}</p>
         </div>
       
       </div>
@@ -248,7 +266,7 @@ const Land = () => {
           
         },
       }}>
-        <DialogTitle><h3>check Attencden Number</h3></DialogTitle>
+        <DialogTitle><h3>Enter the details</h3></DialogTitle>
         <DialogContent>
           <TextField  fullWidth name='Date' type='date' required 
           ></TextField>

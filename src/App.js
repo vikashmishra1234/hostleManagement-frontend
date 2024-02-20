@@ -18,6 +18,7 @@ import Fourthyear from './components/hostler/Fourthyear';
 import AdminState from './components/context/AdminState';
 import Contact from './components/hostle/Contact';
 import Fotter from './components/hostle/Fotter';
+import Card from './components/hostle/Card';
 
 function App() {
   const allow = sessionStorage.getItem("authtoken");
@@ -30,16 +31,14 @@ function App() {
   
         <Routes>
           <Route exact path='/' element ={<Components/>}></Route>
-          <Route exact path='/mess' element={<Mess/>}/>
           <Route exact path='/about' element={<About/>}/>
           <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path='/admin' element={allow?<Land/>:<Login/>}/>
+          <Route exact path='/admin' element={sessionStorage.getItem("authtoken")?<Land/>:<Login/>}/>
           <Route exact path='/admin/login/land/firstyear' element={<Firstyear/>}/>
           <Route exact path='/admin/login/land/secondyear' element={<SecondYear/>}/>
           <Route exact path='/admin/login/land/thirdyear' element={<Thirdyear/>}/>
           <Route exact path='/admin/login/land/fourthyear' element={<Fourthyear/>}/>
         </Routes>
-        <Fotter/>
       </Router>
 
   </AdminState>

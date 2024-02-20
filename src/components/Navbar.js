@@ -78,7 +78,7 @@ const Navbar = () => {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Branch
+        Attendence
       </Button>
       <Menu
         id="basic-menu"

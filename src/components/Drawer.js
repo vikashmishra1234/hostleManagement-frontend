@@ -5,7 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import styled from 'styled-components';
 import { IoMdHome } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
-import { SiIfood } from "react-icons/si";
+import { GrGallery } from "react-icons/gr";
 import { GrUserAdmin } from "react-icons/gr";
 
 
@@ -57,10 +57,10 @@ const Drawerr=()=> {
          
         <NewContainer sx={{width:{xs:'40vw',sm:'20vw'}}} >
 
-             <Li  > <IoMdHome size={'30px'} /><Link to='/' > Home</Link></Li> <Divider/>
-             <Li  > <SiIfood size={'30px'} /> <Link to='/mess'> Mess</Link></Li> <Divider/>
-             <Li ><FcAbout size={'30px'} /> <Link to='/about'> About</Link></Li>  <Divider/>
-             <Li  ><GrUserAdmin size={'30px'} /> <Link to='/admin'> Admin</Link></Li>  <Divider/>
+             <Li  > <IoMdHome size={'25px'} /><Link to='/' > Home</Link></Li> <Divider/>
+             <Li ><FcAbout size={'25px'} /> <Link to='/about'> About</Link></Li>  <Divider/>
+             <Li ><GrGallery size={'25px'} /> <a href = '/'> Gallery</a></Li>  <Divider/>
+             <Li  ><GrUserAdmin size={'23px'} /> <Link to='/admin'> Admin</Link></Li>  <Divider/>
         </NewContainer>
             
                     

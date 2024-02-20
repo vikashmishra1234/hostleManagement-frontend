@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-image: url('./utils/img1.jpg');
     background-size: cover;
+  
     margin: -25px 0px 0px 0px;
   
     .container{
@@ -13,7 +14,8 @@
        
     
         .block1{
-           color: white;
+            color: white;
+           font-weight: bold;
            font-size: 3vw;
             text-align: center;
             height: 10vh;
@@ -28,6 +30,7 @@
             .info{
    
                 color: white;
+                font-weight: bold;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -37,6 +40,7 @@
             .contact{
            
                 color: white;
+                font-weight: bold;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -70,7 +74,8 @@
             .block2{
                 
                 .info{
-                    font-size: 6vw !important;
+                    font-size: 6.5vw !important;
+                    font-weight: 600 !important;
                   
                     height: 50vh;
                     margin: auto;

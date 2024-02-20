@@ -61,7 +61,7 @@ const Login = () => {
             timer: 1500
           });
 
-            Navigete('/admin/login/land')
+            Navigete('/admin')
             a.setLogin(true)
          }
         } catch (error) {
@@ -84,8 +84,8 @@ const Login = () => {
         <CiLock/>
         </Avatar>
         <h2>Login</h2>
-        <TextField name='Name' value={Name} onChange={(e)=>{setName(e.target.value)}}  required fullWidth className={css.input} type='text' label="Your Roll No" variant='standard'/>
-        <TextField name='Password' value={Password} onChange={(e)=>{setPassword(e.target.value)}} required fullWidth className={css.input} label="password" type='password' variant='standard'/>
+        <TextField name='Name' value={Name} onChange={(e)=>{setName(e.target.value)}}  required fullWidth className={css.input} type='text' label="Username" variant='standard'/>
+        <TextField name='Password' value={Password} onChange={(e)=>{setPassword(e.target.value)}} required fullWidth className={css.input} label="Password" type='password' variant='standard'/>
         <Button component={'button'} fullWidth variant='contained' type='submit'>{Loading?<BeatLoader size={'12px'}/>:'Login'}</Button>
     </form>
   </div>
