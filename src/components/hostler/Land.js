@@ -35,7 +35,7 @@ const [Students,setStudents] = useState('0')
     const find =async()=>{
 
       try {
-        const res = await axios.get('https://hostlebackend.onrender.com/api/studentnumber',headers);
+        const res = await axios.get('http://localhost:5000/api/studentnumber',headers);
        setStudents(res.data.Students)
       
       } catch (error) {
@@ -58,7 +58,7 @@ const [Students,setStudents] = useState('0')
     console.log("this is attendence foem",formJson);
     try {
       setLoading(true)
-      let response = await axios.post('https://hostlebackend.onrender.com/api/checkattendence',formJson,headers);
+      let response = await axios.post('http://localhost:5000/api/checkattendence',formJson,headers);
       setLoading(false)
       if(response.data.error){
         handleClose()
@@ -132,7 +132,7 @@ const [Students,setStudents] = useState('0')
     console.log(formJson);
     try {
       setLoading(true)
-      let response = await axios.post('https://hostlebackend.onrender.com/api/updatestudent',formJson,headers)
+      let response = await axios.post('http://localhost:5000/api/updatestudent',formJson,headers)
       setLoading(false)
       
       console.log(response.data)
@@ -146,6 +146,7 @@ const [Students,setStudents] = useState('0')
           timer: 1500
         });
       }else{
+       
         handleClose()
         Swal.fire({
           position: "top-",
@@ -156,6 +157,7 @@ const [Students,setStudents] = useState('0')
         });
       }
     } catch (error) {
+      setLoading(false)
       handleClose()
       console.log(error.message)
       Swal.fire({
@@ -192,7 +194,7 @@ const [Students,setStudents] = useState('0')
     console.log(formjson);
     try {
       setLoading(true)
-      let response = await axios.post('https://hostlebackend.onrender.com/api/addstudent',formJson,headers);
+      let response = await axios.post('http://localhost:5000/api/addstudent',formJson,headers);
       setLoading(false)
     
       if(response.data.error){
@@ -216,6 +218,7 @@ const [Students,setStudents] = useState('0')
       }
       console.log(response.data)
     } catch (error) {
+      setLoading(false)
       handleClose()
       console.log("unable to resister ",error.message);
       Swal.fire({
