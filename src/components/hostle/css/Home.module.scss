@@ -1,8 +1,8 @@
 .wrapper{
    height: 100vh;
-    animation: change 10s infinite ease-in-out;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url('./utils/img1.jpg');
     background-size: cover;
     margin: -25px 0px 0px 0px;
   
@@ -55,24 +55,7 @@
     }
  
 }
-@keyframes change{
-  
-    0%{
-        background-image: url('./utils/1.jpg');
-    }
-    25%{
-        background-image: url('./utils/2.jpg');
-    }
-   50%{
-        background-image: url('./utils/3.jpg');
-    }
-   75%{
-        background-image: url('./utils/2.jpg');
-    }
-   100%{
-        background-image: url('./utils/1.jpg');
-    }
-}
+
 
 @media only screen and (max-width: 600px) {
     .wrapper{

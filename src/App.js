@@ -33,8 +33,7 @@ function App() {
           <Route exact path='/mess' element={<Mess/>}/>
           <Route exact path='/about' element={<About/>}/>
           <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path={`${allow?'/admin/login/land':'/admin'}`} element={<Login/>}/>
-          <Route exact path='/admin/login/land' element={<Land/>}/>
+          <Route exact path='/admin' element={allow?<Land/>:<Login/>}/>
           <Route exact path='/admin/login/land/firstyear' element={<Firstyear/>}/>
           <Route exact path='/admin/login/land/secondyear' element={<SecondYear/>}/>
           <Route exact path='/admin/login/land/thirdyear' element={<Thirdyear/>}/>

@@ -60,7 +60,7 @@ const Drawerr=()=> {
              <Li  > <IoMdHome size={'30px'} /><Link to='/' > Home</Link></Li> <Divider/>
              <Li  > <SiIfood size={'30px'} /> <Link to='/mess'> Mess</Link></Li> <Divider/>
              <Li ><FcAbout size={'30px'} /> <Link to='/about'> About</Link></Li>  <Divider/>
-             <Li  ><GrUserAdmin size={'30px'} /> <Link to={`${allow?'/admin/login/land':'/admin'}`}> Admin</Link></Li>  <Divider/>
+             <Li  ><GrUserAdmin size={'30px'} /> <Link to='/admin'> Admin</Link></Li>  <Divider/>
         </NewContainer>
             
                     

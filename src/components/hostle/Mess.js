@@ -1,110 +1,32 @@
-import { Paper } from "@mui/material";
-import React from "react";
-import css from "./css/Mess.module.scss";
-import Rajma from "./css/utils/rajma.jpg";
-import Fade from "react-reveal/Fade";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Img1 from "./css/utils/img1.jpg"
 
-const Mess = () => {
+export default function ImgMediaCard(props) {
   return (
-      <div className={`${css.wrapper}`}>
-        <h2>our menu</h2>
-        <div className={`${css.container}`}>
-          
-            <Fade duration={100}>
-                <Paper  sx={{width:{xs:'70vw',sm:'30vw',md:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
-                 
-                    <h3>Kadi (Mon)</h3>
-
-                    <img src={Rajma} />
-                    <p>
-                      Flavorful red kidney in tomato
-                      based gravy with spices
-                    </p>
-                
-                </Paper>
-            </Fade>
-            
-         
-            <Fade duration={500}>
-                <Paper sx={{width:{xs:'70vw',sm:'30vw',md:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
-                 
-                    <h3>Rajma Chawal</h3>
-                    <img src={Rajma} />
-                    <p>
-                      Flavorful red kidney in tomato
-                      based gravy with spices
-                    </p>
-                
-                </Paper>
-            </Fade>
-         
-         
-            <Fade duration={800}>
-                <Paper sx={{width:{xs:'70vw',sm:'30vw',md:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
-             
-                    <h3>Rajma Chawal</h3>
-                    <img src={Rajma} />
-                    <p>
-                      Flavorful red kidney in tomato
-                      based gravy with spices
-                    </p>
-                 
-                </Paper>
-            </Fade>
-       
-        </div>
-        <div className={`${css.container}`}>
-          
-            <Fade duration={1200}>
-                <Paper sx={{width:{xs:'70vw',sm:'30vw',md:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
-                
-                    <h3>Rajma Chawal</h3>
-
-                    <img src={Rajma} />
-                    <p>
-                      Flavorful red kidney in tomato
-                      based gravy with spices
-                    </p>
-                
-                </Paper>
-           
-            </Fade>
-          
-         
-            <Fade duration={1500}>
-              
-                <Paper sx={{width:{xs:'70vw',sm:'30vw',md:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
-                  
-                    <h3>Rajma Chawal</h3>
-                    <img src={Rajma} />
-                    <p>
-                      Flavorful red kidney in tomato
-                     based gravy with spices
-                    </p>
-               
-                </Paper>
-            
-            </Fade>
-        
-          
-            <Fade duration={2000}>
-                <Paper sx={{width:{xs:'70vw',sm:'30vw',md:'20vw'},backgroundColor:'aqua',height:'fit-content',textAlign:'center'}}   elevation={10}>
-              
-                 
-                    <h3>Rajma Chawal</h3>
-                    <img src={Rajma} />
-                    <p>
-                      Flavorful red kidney in tomato
-                      based gravy with spices
-                    </p>
-                
-              
-                </Paper>
-            </Fade>
-        
-        </div>
-      </div>
+    <Card sx={{ maxWidth: {xs:'80vw',sm:'30vw',md:345} }}>
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        height="180"
+        image={props.img}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+         { props.title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {props.text}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button variant="outlined" size="small">View More</Button>
+      </CardActions>
+    </Card>
   );
-};
-
-export default Mess;
+}

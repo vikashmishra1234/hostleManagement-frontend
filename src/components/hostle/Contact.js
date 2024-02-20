@@ -78,7 +78,7 @@ const Contact = () => {
   
     return (
       <div className={css.container}>
-        <h1>Register Now</h1>
+        <h1>For more info</h1>
       <div className={css.form}>
         <Paper variant="outlined" elevation={8}>
 
@@ -91,8 +91,6 @@ const Contact = () => {
           {errors.phone && touched.phone?<small style={{color:"red"}}>{errors.phone}</small>:''}
         <TextField onChange={handleChange} value={values.year} onBlur={handleBlur} name="year" label="year of studying" type="number"   variant="outlined" />
           {errors.year && touched.year?<small style={{color:"red"}}>{errors.year}</small>:''}
-        <TextField onChange={handleChange} value={values.id} onBlur={handleBlur} name="id" label="your Identity Number" type="text"  variant="outlined" />
-          {errors.id && touched.id?<small style={{color:"red"}}>{errors.id}</small>:''}
         <Button variant="contained" type="submit">{Loader?<BeatLoader></BeatLoader>:'Register'}</Button>
         </form>
         </Paper>

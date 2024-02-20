@@ -52,15 +52,15 @@ const Navbar = () => {
               flex={1}
               component={"div"}
               sx={{fontSize:'24px',display:{xs:'none',sm:'flex'},
-             fontWeight:'600'}}
-            ><FaUniversity  size={35}  /> <span style={{marginLeft:'10px'}}>Bsa Hostle</span> </Typography>
+             fontWeight:'600',alignItems:'center'}}
+            ><FaUniversity  size={50}  /> <span style={{marginLeft:'10px',fontSize:'26px'}}>Bsa Hostle</span> </Typography>
   
             <Links id='link' sx={{display:{xs:'none',sm:'flex'},width:{sm:'50%',md:'40%'}
           }} >
               <Link to='/'>Home</Link>
               <Link to='/mess'>Mess</Link>
               <Link to='/about'>About</Link>
-              <Link to={`${allow?'/admin/login/land':'/admin'}`}>Admin</Link>
+              <Link to='/admin'>Admin</Link>
    
 
                 
