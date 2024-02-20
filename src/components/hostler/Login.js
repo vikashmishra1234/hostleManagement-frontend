@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {TextField, Button} from '@mui/material'
 import css from '../hostle/css/Login.module.scss'
 import {Avatar} from '@mui/material'
@@ -20,6 +20,14 @@ const Login = () => {
     const [Loading,setLoding]=useState(false)
     const Navigete = useNavigate()
 
+    useEffect(()=>{
+        Swal.fire({
+          icon:'info',
+          text:'usernname: vikash ,pass:1234',
+          confirmButtonAriaLabel:true
+        })
+    },[])
+
     const handleSubmit = async(e)=>{
       setLoding(true)
   
@@ -38,7 +46,7 @@ const Login = () => {
               "Content-Type":"application/json"
             }
           }
-         let response = await axios.post('https://hostlebackend.onrender.com/api/adminlogin',stuData,headers);
+         let response = await axios.post('http://localhost:5000/api/adminlogin',stuData,headers);
          setLoding(false)
          if(response.data.error){
 
@@ -61,7 +69,7 @@ const Login = () => {
             timer: 1500
           });
 
-            Navigete('/admin')
+            Navigete('/admin/loginx')
             a.setLogin(true)
          }
         } catch (error) {

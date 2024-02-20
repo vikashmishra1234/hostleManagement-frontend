@@ -12,6 +12,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { BeatLoader } from 'react-spinners';
+import { Student } from '../hostle/Validations/Resistration';
 
 const Land = () => {
  
@@ -34,7 +35,7 @@ const [Students,setStudents] = useState('0')
     const find =async()=>{
 
       try {
-        const res = await axios.get('https://hostle-management-frontend-bvwf.vercel.app/api/studentnumber',headers);
+        const res = await axios.get('http://localhost:5000/api/studentnumber',headers);
        setStudents(res.data.Students)
       
       } catch (error) {
@@ -57,7 +58,7 @@ const [Students,setStudents] = useState('0')
     console.log("this is attendence foem",formJson);
     try {
       setLoading(true)
-      let response = await axios.post('https://hostlebackend.onrender.com/api/checkattendence',formJson,headers);
+      let response = await axios.post('http://localhost:5000/api/checkattendence',formJson,headers);
       setLoading(false)
       if(response.data.error){
         handleClose()
@@ -131,7 +132,7 @@ const [Students,setStudents] = useState('0')
     console.log(formJson);
     try {
       setLoading(true)
-      let response = await axios.post('https://hostlebackend.onrender.com/api/updatestudent',formJson,headers)
+      let response = await axios.post('http://localhost:5000/api/updatestudent',formJson,headers)
       setLoading(false)
       
       console.log(response.data)
@@ -177,10 +178,21 @@ const [Students,setStudents] = useState('0')
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
+    console.log(formJson)
+    const formjson = await Student.isValid(formJson)
+    if(!formjson){
+      handleClose();
+      Swal.fire({
+        text:'invalid credentials',
+        icon:'warning',
+        confirmButtonAriaLabel:"true"
+      })
+      return ;
+    }
+    console.log(formjson);
     try {
       setLoading(true)
-      let response = await axios.post('https://hostlebackend.onrender.com/api/addstudent',formJson,headers);
+      let response = await axios.post('http://localhost:5000/api/addstudent',formJson,headers);
       setLoading(false)
     
       if(response.data.error){
@@ -267,10 +279,10 @@ const [Students,setStudents] = useState('0')
         },
       }}>
         <DialogTitle><h3>Enter the details</h3></DialogTitle>
-        <DialogContent>
-          <TextField  fullWidth name='Date' type='date' required 
+        <DialogContent sx={{gap:'10px'}}>
+          <TextField margin='dense' fullWidth name='Date' type='date' required 
           ></TextField>
-          <TextField  fullWidth name='Phone' type='phone' required label="Please enter Phone"
+          <TextField  fullWidth  margin='dense' name='Phone' type='phone' required label="Please enter Phone"
           ></TextField>
         </DialogContent>
 
@@ -345,18 +357,14 @@ const [Students,setStudents] = useState('0')
            fullWidth
            variant="standard"
          />
-         <TextField
-           
-           required
-           margin="dense"
-           id='year'
-           name='Year'
-           label="Year"
-           type="number"
-     
-           fullWidth
-           variant="standard"
-         />
+         
+  <select style={{height:'39px',marginTop:'33px',width:'106px',borderRadius:'12px'}} name="Year" >
+    <option value={null}>choose year</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
        </DialogContent>
        <DialogActions sx={{margin:'0px 5px 15px 0px'}}>
          <Button onClick={handleClose}>Cancel</Button>

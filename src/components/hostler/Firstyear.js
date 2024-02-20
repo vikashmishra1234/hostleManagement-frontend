@@ -24,7 +24,6 @@ const Firstyear = () => {
                 let response =await axios.get('https://hostlebackend.onrender.com/api/getstudent',headers);
                 setLoder(false)
                 setStudentData(response.data)
-               console.log("this is student data",studentData);
              
                 
             } catch (error) {
