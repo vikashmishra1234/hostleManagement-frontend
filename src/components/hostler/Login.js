@@ -59,6 +59,7 @@ const Login = () => {
           });
          }
          else{
+          a.setLogin(true)
           sessionStorage.setItem("authtoken",response.data.token)
           localStorage.setItem("token",response.data.token)
           Swal.fire({
@@ -70,7 +71,6 @@ const Login = () => {
           });
 
             Navigete('/admin/loginx')
-            a.setLogin(true)
          }
         } catch (error) {
           setLoding(false)

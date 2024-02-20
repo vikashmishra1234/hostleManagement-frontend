@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from './components/Navbar';
 import {
 
@@ -17,8 +17,6 @@ import Thirdyear from './components/hostler/Thirdyear';
 import Fourthyear from './components/hostler/Fourthyear';
 import AdminState from './components/context/AdminState';
 import Contact from './components/hostle/Contact';
-import Fotter from './components/hostle/Fotter';
-import Card from './components/hostle/Card';
 
 function App() {
   const allow = sessionStorage.getItem("authtoken");
@@ -33,7 +31,7 @@ function App() {
           <Route exact path='/' element ={<Components/>}></Route>
           <Route exact path='/about' element={<About/>}/>
           <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path='/admin' element={localStorage.getItem("token")?<Land/>:<Login/>}/>
+          <Route exact path='/admin' element={sessionStorage.getItem("token")?<Land/>:<Login/>}/>
           <Route exact path='/admin/loginx' element={<Land/>}/>
           <Route exact path='/admin/login/land/firstyear' element={<Firstyear/>}/>
           <Route exact path='/admin/login/land/secondyear' element={<SecondYear/>}/>
