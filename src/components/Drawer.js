@@ -7,6 +7,8 @@ import { IoMdHome } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
 import { GrGallery } from "react-icons/gr";
 import { GrUserAdmin } from "react-icons/gr";
+import AdminContext from './context/AdminContext';
+import { useContext } from 'react';
 
 
 const NewContainer = styled(Container)(
@@ -25,6 +27,11 @@ const Li = styled(MenuItem)(
 
 const Drawerr=()=> {
   const allow = sessionStorage.getItem("authtoken");
+
+  const a = React.useContext(AdminContext)
+  if(allow){
+    a.setLogin(true)
+  }
 
     const [state, setState] = React.useState({
         top: false,
@@ -56,11 +63,12 @@ const Drawerr=()=> {
           >
          
         <NewContainer sx={{width:{xs:'40vw',sm:'20vw'}}} >
+          {console.log(a.Logined)}
 
              <Li  > <IoMdHome size={'25px'} /><Link to='/' > Home</Link></Li> <Divider/>
              <Li ><FcAbout size={'25px'} /> <Link to='/about'> About</Link></Li>  <Divider/>
-             <Li ><GrGallery size={'25px'} /> <a href = '/'> Gallery</a></Li>  <Divider/>
-             <Li  ><GrUserAdmin size={'23px'} /> <Link to='/admin'> Admin</Link></Li>  <Divider/>
+             <Li ><GrGallery size={'25px'} /> <a href = 'https://www.bsacet.org/gallery/' target='_blank'> Gallery</a></Li>  <Divider/>
+             <Li  ><GrUserAdmin size={'23px'} /> <Link to={`${a.Logined?'/admin/loginx':'/admin'}`}> Admin</Link></Li>  <Divider/>
         </NewContainer>
             
                     
