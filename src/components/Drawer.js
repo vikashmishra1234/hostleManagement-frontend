@@ -68,7 +68,7 @@ const Drawerr=()=> {
              <Li  > <IoMdHome size={'25px'} /><Link to='/' > Home</Link></Li> <Divider/>
              <Li ><FcAbout size={'25px'} /> <Link to='/about'> About</Link></Li>  <Divider/>
              <Li ><GrGallery size={'25px'} /> <a href = 'https://www.bsacet.org/gallery/' target='_blank'> Gallery</a></Li>  <Divider/>
-             <Li  ><GrUserAdmin size={'23px'} /> <Link to={`${a.Logined?'/admin/loginx':'/admin'}`}> Admin</Link></Li>  <Divider/>
+             <Li  ><GrUserAdmin size={'23px'} /> <Link to='/admin'> Admin</Link></Li>  <Divider/>
         </NewContainer>
             
                     
