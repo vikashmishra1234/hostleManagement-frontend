@@ -31,8 +31,8 @@ function App() {
           <Route exact path='/' element ={<Components/>}></Route>
           <Route exact path='/about' element={<About/>}/>
           <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path='/admin' element={sessionStorage.getItem("token")?<Land/>:<Login/>}/>
-          <Route exact path='/admin/loginx' element={<Land/>}/>
+          <Route exact path='/admin' element={sessionStorage.getItem("token")?<Land key={2}/>:<Login/>}/>
+          <Route exact path='/admin/loginx' element={<Land key={1} />}/>
           <Route exact path='/admin/login/land/firstyear' element={<Firstyear/>}/>
           <Route exact path='/admin/login/land/secondyear' element={<SecondYear/>}/>
           <Route exact path='/admin/login/land/thirdyear' element={<Thirdyear/>}/>
