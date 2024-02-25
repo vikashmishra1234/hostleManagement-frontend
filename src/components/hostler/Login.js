@@ -46,7 +46,7 @@ const Login = () => {
               "Content-Type":"application/json"
             }
           }
-         let response = await axios.post('https://hostlebackend.onrender.com/api/adminlogin',stuData,headers);
+         let response = await axios.post('http://localhost:5000/api/adminlogin',stuData,headers);
          setLoding(false)
          if(response.data.error){
 
