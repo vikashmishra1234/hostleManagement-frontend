@@ -8,8 +8,3 @@ export const ResistrationSchema = Yup.object({
     year:Yup.string().min(1).max(1).required("year is required"),
     phone:Yup.string().min(10).max(10)
 })
-export const Student = Yup.object().shape({
-    Name:Yup.string().min(3).max(25).required("Name is required"),
-    Year:Yup.string().min(1).max(1).required("year is required"),
-    Phone:Yup.string().min(10).max(10).required()
-})

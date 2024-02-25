@@ -7,13 +7,10 @@ import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { BeatLoader } from "react-spinners";
-import { Student } from "../hostle/Validations/Resistration";
-import SendEmail from "./SendEmail";
 
 const Land = () => {
   const [open, setOpen] = React.useState(false);
@@ -164,18 +161,7 @@ const Land = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
-    const formjson = await Student.isValid(formJson);
-    if (!formjson) {
-      handleClose();
-      Swal.fire({
-        text: "invalid credentials",
-        icon: "warning",
-        confirmButtonAriaLabel: "true",
-      });
-      return;
-    }
-    console.log(formjson);
+    
     try {
       setLoading(true);
       let response = await axios.post(
@@ -247,10 +233,6 @@ const Land = () => {
             <p>Students: {Students}</p>
           </div>
 
-          <div className={css.box} onClick={setOPen(true)}>
-            <h3>Send Message</h3>
-            <p>Send the Email Message to the Students</p>
-          </div>
         </div>
        
       </div>
@@ -386,7 +368,7 @@ const Land = () => {
           </DialogActions>
         </Dialog>
       </React.Fragment>
-      <SendEmail Open={OPen}/>
+     
 
     </>
   );
